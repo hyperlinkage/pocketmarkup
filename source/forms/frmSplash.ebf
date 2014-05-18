@@ -1,0 +1,107 @@
+VERSION 5.00
+Object = "{F7346713-70C5-11D1-9AC9-00C04FAD5AEC}#1.0#0"; "msceimage.dll"
+Begin VB.Form frmSplash 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "PocketMarkup"
+   ClientHeight    =   3615
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   3600
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   241
+   ScaleMode       =   3  'Pixel
+   ScaleWidth      =   240
+   Begin VBCE.Label Label1 
+      Height          =   225
+      Left            =   0
+      TabIndex        =   1
+      Top             =   1560
+      Width           =   3600
+      _cx             =   6350
+      _cy             =   397
+      AutoSize        =   0   'False
+      BackColor       =   -2147483643
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "www.yaffle.org"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin IMAGECtl.ImageCtl imgSplash 
+      Height          =   300
+      Left            =   660
+      TabIndex        =   0
+      Top             =   960
+      Width           =   2280
+      _cx             =   4022
+      _cy             =   529
+      Picture         =   ""
+      Stretch         =   0   'False
+   End
+   Begin VBCE.Timer Timer 
+      Left            =   2760
+      Top             =   0
+      _cx             =   847
+      _cy             =   847
+      Enabled         =   -1  'True
+      Interval        =   100
+   End
+End
+Attribute VB_Name = "frmSplash"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'   Form frmSplash
+'
+'   Description:
+'       This form appears as a brief splash screen while
+'       the application is loading
+'
+'   Public Functions:
+'
+'   Written by:
+'       tim@yaffle.org
+'
+'   Version:
+'       1.0.0
+'       23rd February 2002
+
+
+Option Explicit
+
+
+Private Sub Form_Load()
+
+'   Description:
+'       Loads the PocketMarkup logo into the Image control
+'       in the centre of the form
+
+    imgSplash.Picture = App.Path & "\logo.bmp"
+
+End Sub
+
+
+Private Sub Timer_Timer()
+
+'   Description:
+'       After a very brief pause, the main form is shown,
+'       which initiates the bulk of the loading process
+
+    Timer.Enabled = False
+    frmMain.Show
+
+End Sub

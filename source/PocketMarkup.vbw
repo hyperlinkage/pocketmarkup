@@ -1,0 +1,15 @@
+XmlInsertion = 32, 28, 986, 922, 
+TextFunctions = 50, 498, 706, 1114, C
+FileReadWrite = 4, 9, 753, 742, C
+FileManagement = 172, 4, 923, 928, C
+ToolbarHandling = 78, 24, 883, 913, C
+frmMain = 64, -15, 873, 909, C, 242, 232, 541, 685, C
+frmAbout = 44, -7, 944, 920, C, 588, 368, 899, 694, C
+basEdit = 44, 44, 741, 660, C
+WordList = 21, 77, 973, 826, C
+UserOptions = 100, 14, 895, 894, C
+MenuBar = 46, 218, 947, 924, C
+AppStartEnd = 114, 90, 811, 706, C
+DomManipulation = 38, 86, 861, 842, 
+frmSplash = 170, 218, 843, 834, C, 542, 244, 821, 570, C
+frmOptions = 58, 92, 881, 868, C, 42, 144, 923, 758, C

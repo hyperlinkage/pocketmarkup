@@ -1,0 +1,490 @@
+VERSION 5.00
+Object = "{A32A88B3-817C-11D1-A762-00AA0044064C}#1.0#0"; "mscecomdlg.dll"
+Object = "{25C953A7-5464-11D1-A714-00AA0044064C}#1.0#0"; "MSCEFILE.DLL"
+Object = "{F7DEA2C9-BA8F-446E-A292-B4840F3BD661}#1.0#0"; "mscemenubar.dll"
+Object = "{E491F001-98EC-11D1-9B3D-00C04FAD5AEC}#1.0#0"; "msceimagelist.dll"
+Begin VB.Form frmMain 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "PocketMarkup"
+   ClientHeight    =   4065
+   ClientLeft      =   60
+   ClientTop       =   840
+   ClientWidth     =   3510
+   ClipControls    =   0   'False
+   ForeColor       =   &H00000000&
+   Moveable        =   0   'False
+   ScaleHeight     =   4065
+   ScaleWidth      =   3510
+   ShowOK          =   -1  'True
+   Begin VBCE.Frame fraEditView 
+      Height          =   4020
+      Left            =   0
+      TabIndex        =   0
+      Top             =   0
+      Width           =   3600
+      _cx             =   6350
+      _cy             =   7091
+      BackColor       =   -2147483643
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   0   'False
+      Begin CEImageListCtl.ImageList ImageList 
+         Left            =   2640
+         Top             =   2520
+         _cx             =   990
+         _cy             =   990
+         ImageWidth      =   16
+         ImageHeight     =   16
+      End
+      Begin VBCE.Frame fraTagToolbar 
+         Height          =   400
+         Left            =   0
+         TabIndex        =   4
+         Top             =   3620
+         Width           =   3600
+         _cx             =   6350
+         _cy             =   706
+         BackColor       =   -2147483643
+         BorderStyle     =   0
+         Caption         =   ""
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         ClipControls    =   0   'False
+         Begin VBCE.CommandButton cmdEmptyTag 
+            Height          =   300
+            Left            =   2950
+            TabIndex        =   7
+            Top             =   50
+            Width           =   550
+            _cx             =   970
+            _cy             =   529
+            BackColor       =   12632256
+            Caption         =   "Empty"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Style           =   0
+         End
+         Begin VBCE.CommandButton cmdFullTag 
+            Height          =   300
+            Left            =   2340
+            TabIndex        =   6
+            Top             =   50
+            Width           =   550
+            _cx             =   970
+            _cy             =   529
+            BackColor       =   12632256
+            Caption         =   "Tag"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Style           =   0
+         End
+         Begin VBCE.ComboBox cboNewTag 
+            Height          =   300
+            Left            =   50
+            TabIndex        =   5
+            Top             =   50
+            Width           =   2240
+            List            =   "frmMain.frx":0000
+            ItemData        =   "frmMain.frx":0028
+            _cx             =   3951
+            _cy             =   529
+            BackColor       =   -2147483643
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   0
+            Text            =   ""
+            IntegralHeight  =   -1  'True
+            Locked          =   0   'False
+            Sorted          =   -1  'True
+            Style           =   0
+         End
+      End
+      Begin VBCE.Frame fraAttributeToolbar 
+         Height          =   400
+         Left            =   0
+         TabIndex        =   1
+         Top             =   1000
+         Visible         =   0   'False
+         Width           =   3600
+         _cx             =   6350
+         _cy             =   706
+         BackColor       =   -2147483643
+         BorderStyle     =   0
+         Caption         =   ""
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         ClipControls    =   0   'False
+         Begin VBCE.ComboBox cboAttributeValue 
+            Height          =   300
+            Left            =   995
+            TabIndex        =   9
+            Top             =   45
+            Width           =   1295
+            List            =   "frmMain.frx":0050
+            ItemData        =   "frmMain.frx":0078
+            _cx             =   2284
+            _cy             =   529
+            BackColor       =   -2147483643
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Text            =   ""
+            IntegralHeight  =   -1  'True
+            Locked          =   0   'False
+            Sorted          =   -1  'True
+            Style           =   0
+         End
+         Begin VBCE.ComboBox cboAttributeName 
+            Height          =   300
+            Left            =   50
+            TabIndex        =   3
+            Top             =   50
+            Width           =   895
+            List            =   "frmMain.frx":00A0
+            ItemData        =   "frmMain.frx":00C8
+            _cx             =   1579
+            _cy             =   529
+            BackColor       =   -2147483643
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Text            =   ""
+            IntegralHeight  =   -1  'True
+            Locked          =   0   'False
+            Sorted          =   -1  'True
+            Style           =   0
+         End
+         Begin VBCE.CommandButton cmdAttribute 
+            Height          =   300
+            Left            =   2340
+            TabIndex        =   2
+            Top             =   45
+            Width           =   1160
+            _cx             =   2046
+            _cy             =   529
+            BackColor       =   12632256
+            Caption         =   "Attribute"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Style           =   0
+         End
+      End
+      Begin VBCE.TextBox txtMainOff 
+         Height          =   3615
+         Left            =   0
+         TabIndex        =   10
+         Top             =   0
+         Visible         =   0   'False
+         Width           =   3600
+         _cx             =   6350
+         _cy             =   6376
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Courier New"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   ""
+         Alignment       =   0
+         HideSelection   =   0   'False
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   -1  'True
+         PasswordChar    =   ""
+         ScrollBars      =   3
+      End
+      Begin VBCE.TextBox txtMainOn 
+         Height          =   3615
+         Left            =   0
+         TabIndex        =   8
+         Top             =   0
+         Visible         =   0   'False
+         Width           =   3600
+         _cx             =   6350
+         _cy             =   6385
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Courier New"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   ""
+         Alignment       =   0
+         HideSelection   =   0   'False
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   -1  'True
+         PasswordChar    =   ""
+         ScrollBars      =   2
+      End
+   End
+   Begin FILECTLCtl.File FileControl 
+      Left            =   2400
+      Top             =   360
+      _cx             =   1000
+      _cy             =   1000
+   End
+   Begin MenuBarLib.MenuBar MenuBar 
+      Left            =   1800
+      Top             =   360
+      _cx             =   1085
+      _cy             =   1085
+      Enabled         =   -1  'True
+      NewButton       =   0   'False
+   End
+   Begin CEComDlgCtl.CommonDialog CommonDialog 
+      Left            =   3000
+      Top             =   360
+      _cx             =   847
+      _cy             =   847
+      CancelError     =   0   'False
+      Color           =   0
+      DefaultExt      =   ""
+      DialogTitle     =   ""
+      FileName        =   ""
+      Filter          =   ""
+      FilterIndex     =   0
+      Flags           =   0
+      HelpCommand     =   0
+      HelpContext     =   ""
+      HelpFile        =   ""
+      InitDir         =   ""
+      MaxFileSize     =   256
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontUnderline   =   0   'False
+      Max             =   0
+      Min             =   0
+      FontStrikethru  =   0   'False
+   End
+End
+Attribute VB_Name = "frmMain"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'   Form frmMain
+'
+'   Description:
+'       This is the main form in the application.  Most of
+'       the main form event handlers are passed through to
+'       functions in other modules.
+'
+'   Public Functions:
+'
+'   Written by:
+'       tim@yaffle.org
+'
+'   Version:
+'       1.2.0
+'       23rd February 2002
+
+Option Explicit
+
+' form event handlers
+
+Private Sub Form_Load()
+    
+'   Description:
+'       When the form is first loaded into memory, call the
+'       StartApp routine, which loads user preferences, etc.
+    
+    StartApp
+
+End Sub
+
+
+Private Sub Form_Activate()
+
+'   Description:
+'       When the form becomes active, make the controls align
+'       themselves properly, and hide the splash screen
+    
+    MainFormAlign
+    frmSplash.Hide
+
+End Sub
+
+
+Private Sub Form_Resize()
+
+'   Description:
+'       Whenever the form is resized, eg. because of a change in
+'       the SIP panel, re-align the form controls
+    
+    MainFormAlign
+
+End Sub
+
+
+' control event handlers
+
+Private Sub MenuBar_MenuClick(ByVal Item As MenuBarLib.Item)
+    MenuBarClick Item
+End Sub
+
+
+Private Sub MenuBar_ButtonClick(ByVal button As MenuBarLib.Item)
+    MenuButtonClick button
+End Sub
+
+Private Sub cmdFullTag_Click()
+    ' full tag button
+    InsertTag MainTextBox, cboNewTag, cmdFullTag.Caption
+End Sub
+
+
+Private Sub cmdEmptyTag_Click()
+    ' empty tag button
+    InsertTag MainTextBox, cboNewTag, cmdEmptyTag.Caption
+End Sub
+
+
+Private Sub cmdAttribute_Click()
+    InsertAttribute MainTextBox, cboAttributeName, cboAttributeValue
+End Sub
+
+
+
+Private Sub txtMainOff_Change()
+    FileModified = True
+End Sub
+
+
+Private Sub txtMainOff_GotFocus()
+    pInitEditMenu
+End Sub
+
+
+Private Sub txtMainOn_Change()
+    FileModified = True
+End Sub
+
+
+Private Sub txtMainOn_GotFocus()
+    pInitEditMenu
+End Sub
+
+
+Private Sub txtMainOff_Click()
+    pInitEditMenu
+End Sub
+
+
+Private Sub txtMainOn_Click()
+    pInitEditMenu
+End Sub
+
+
+Private Sub cboNewTag_Click()
+    pInitEditMenu
+End Sub
+
+
+Private Sub cboAttributeValue_Click()
+    pInitEditMenu
+End Sub
+
+
+Private Sub cboAttributeName_Click()
+    pInitEditMenu
+End Sub
+
+
+Private Sub Form_OKClick()
+    EndApp
+End Sub

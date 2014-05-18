@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+	Description:
+		User options file for PocketMarkup.		
+-->
+<options>
+	<option name="Word File Path">[App]\wordlist.xml</option>
+	<option name="Default Language">HTML</option>
+	<option name="Word Wrap">True</option>
+	<option name="Tag Toolbar">True</option>
+	<option name="Attribute Toolbar">False</option>
+	<option name="Save Word List">True</option>
+	<option name="Load Word List">True</option>
+	<option name="Check XML Load">True</option>
+	<option name="Font Name">Courier New</option>
+	<option name="Font Size">10</option>
+	<option name="Font Bold">False</option>
+	<option name="Font Italic">False</option>
+</options>
+

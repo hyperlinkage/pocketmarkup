@@ -1,0 +1,479 @@
+VERSION 5.00
+Object = "{01FC4473-8DE5-11D1-91B7-00C04FA87A04}#1.0#0"; "mscetabstrip.dll"
+Begin VB.Form frmOptions 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "Options"
+   ClientHeight    =   7785
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   12450
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   7785
+   ScaleWidth      =   12450
+   ShowOK          =   -1  'True
+   Begin VBCE.Frame fraXml 
+      Height          =   3495
+      Left            =   7560
+      TabIndex        =   3
+      Top             =   0
+      Width           =   3495
+      _cx             =   6165
+      _cy             =   6165
+      BackColor       =   -2147483643
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.Frame Frame2 
+         Height          =   1575
+         Left            =   240
+         TabIndex        =   8
+         Top             =   240
+         Width           =   2895
+         _cx             =   5106
+         _cy             =   2778
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Caption         =   "Check well-formed XML"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         ClipControls    =   -1  'True
+         Begin VBCE.CheckBox chkXmlCheckload 
+            Height          =   255
+            Left            =   240
+            TabIndex        =   9
+            Top             =   360
+            Width           =   2295
+            _cx             =   4048
+            _cy             =   450
+            BackColor       =   -2147483643
+            Caption         =   "On file load"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+      End
+   End
+   Begin VBCE.Frame fraGeneral 
+      Height          =   3255
+      Left            =   3840
+      TabIndex        =   1
+      Top             =   0
+      Visible         =   0   'False
+      Width           =   3495
+      _cx             =   6165
+      _cy             =   5741
+      BackColor       =   -2147483643
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.Frame Frame1 
+         Height          =   1575
+         Left            =   240
+         TabIndex        =   4
+         Top             =   240
+         Width           =   3135
+         _cx             =   5530
+         _cy             =   2778
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Caption         =   "Default View"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         ClipControls    =   -1  'True
+         Begin VBCE.CheckBox chkGeneralAttributetoolbar 
+            Height          =   255
+            Left            =   240
+            TabIndex        =   7
+            Top             =   1080
+            Width           =   2175
+            _cx             =   3836
+            _cy             =   450
+            BackColor       =   -2147483643
+            Caption         =   "Attribute Toolbar"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+         Begin VBCE.CheckBox chkGeneralTagtoolbar 
+            Height          =   255
+            Left            =   240
+            TabIndex        =   6
+            Top             =   720
+            Width           =   2535
+            _cx             =   4471
+            _cy             =   450
+            BackColor       =   -2147483643
+            Caption         =   "Tag Toolbar"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+         Begin VBCE.CheckBox chkGeneralWordwrap 
+            Height          =   255
+            Left            =   240
+            TabIndex        =   5
+            Top             =   360
+            Width           =   2655
+            _cx             =   4683
+            _cy             =   450
+            BackColor       =   -2147483643
+            Caption         =   "Word Wrap"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+      End
+   End
+   Begin VBCE.Frame fraWordlist 
+      Height          =   3015
+      Left            =   0
+      TabIndex        =   2
+      Top             =   0
+      Width           =   3615
+      _cx             =   6376
+      _cy             =   5318
+      BackColor       =   -2147483643
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.Frame Frame3 
+         Height          =   1575
+         Left            =   240
+         TabIndex        =   10
+         Top             =   240
+         Width           =   3135
+         _cx             =   5530
+         _cy             =   2778
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Caption         =   "Custom Word List"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         ClipControls    =   -1  'True
+         Begin VBCE.CheckBox chkWordlistSave 
+            Height          =   495
+            Left            =   240
+            TabIndex        =   12
+            Top             =   600
+            Width           =   2655
+            _cx             =   4683
+            _cy             =   873
+            BackColor       =   -2147483643
+            Caption         =   "Save on program exit"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+         Begin VBCE.CheckBox chkWordlistLoad 
+            Height          =   255
+            Left            =   240
+            TabIndex        =   11
+            Top             =   360
+            Width           =   2775
+            _cx             =   4895
+            _cy             =   450
+            BackColor       =   -2147483643
+            Caption         =   "Load on program start"
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483640
+            Alignment       =   0
+            Value           =   0
+         End
+      End
+   End
+   Begin CETabStripCtl.TabStrip TabStrip 
+      Height          =   375
+      Left            =   0
+      TabIndex        =   0
+      Top             =   3240
+      Width           =   3495
+      _cx             =   6165
+      _cy             =   661
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   "MS Sans Serif"
+      FontSize        =   8
+      MultiRow        =   0   'False
+      Style           =   0
+      TabFixedHeight  =   0
+      TabFixedWidth   =   0
+      TabWidthStyle   =   0
+      TabsPersist     =   $"frmOptions.frx":0000
+      Enabled         =   -1  'True
+   End
+End
+Attribute VB_Name = "frmOptions"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+
+
+Dim Tabbed(2) As Frame
+
+Private Sub Form_Load()
+
+    Set Tabbed(0) = frmOptions.fraGeneral
+    Set Tabbed(1) = frmOptions.fraWordlist
+    Set Tabbed(2) = frmOptions.fraXml
+
+    GetOptions
+
+End Sub
+
+
+Private Sub Form_Activate()
+
+    TabStrip.Tabs(1).Selected = True
+    FormAlign
+
+End Sub
+
+Private Sub Form_Resize()
+
+    FormAlign
+
+End Sub
+
+
+Private Sub TabStrip_Click()
+    
+    Dim fra As Frame
+    
+    For Each fra In Tabbed
+        fra.Visible = False
+    Next fra
+
+    Select Case TabStrip.SelectedItem.Caption
+        Case "General"
+            fraGeneral.Visible = True
+        Case "Word Lists"
+            fraWordlist.Visible = True
+        Case "XML"
+            fraXml.Visible = True
+    End Select
+    
+
+End Sub
+
+
+Private Sub FormAlign()
+
+    TabStrip.Top = frmOptions.Height - TabStrip.Height
+    TabStrip.Left = 0
+    TabStrip.Width = frmOptions.Width
+    
+    Dim fra As Frame
+    
+    For Each fra In Tabbed
+        fra.Height = (frmOptions.Height - TabStrip.Height) + 45
+        fra.Width = frmOptions.Width
+        fra.Top = 0
+        fra.Left = 0
+    Next fra
+    
+End Sub
+
+
+Private Sub GetOptions()
+
+    ' Init word wrap checkbox
+    If GetOptionValue("Word Wrap") = "True" Then
+        chkGeneralWordwrap.Value = 1
+    Else
+        chkGeneralWordwrap.Value = 0
+    End If
+
+    ' Init toolbar checkboxes
+    If GetOptionValue("Tag Toolbar") = "True" Then
+        chkGeneralTagtoolbar.Value = 1
+    Else
+        chkGeneralTagtoolbar.Value = 0
+    End If
+
+    If GetOptionValue("Attribute Toolbar") = "True" Then
+        chkGeneralAttributetoolbar.Value = 1
+    Else
+        chkGeneralAttributetoolbar.Value = 0
+    End If
+    
+    If GetOptionValue("Save Word List") = "True" Then
+        chkWordlistSave.Value = 1
+    Else
+        chkWordlistSave.Value = 0
+    End If
+      
+    If GetOptionValue("Load Word List") = "True" Then
+        chkWordlistLoad.Value = 1
+    Else
+        chkWordlistLoad.Value = 0
+    End If
+          
+    If GetOptionValue("Check XML Load") = "True" Then
+        chkXmlCheckload.Value = 1
+    Else
+        chkXmlCheckload.Value = 0
+    End If
+    
+End Sub
+
+Private Sub SetOptions()
+
+    ' Set word wrap options
+    If chkGeneralWordwrap.Value = 1 Then
+        SetOptionValue "Word Wrap", "True"
+    Else
+        SetOptionValue "Word Wrap", "False"
+    End If
+    
+    ' Set toolbar options
+    If chkGeneralTagtoolbar.Value = 1 Then
+        SetOptionValue "Tag Toolbar", "True"
+    Else
+        SetOptionValue "Tag Toolbar", "False"
+    End If
+    
+    If chkGeneralAttributetoolbar.Value = 1 Then
+        SetOptionValue "Attribute Toolbar", "True"
+    Else
+        SetOptionValue "Attribute Toolbar", "False"
+    End If
+    
+    If chkWordlistLoad.Value = 1 Then
+        SetOptionValue "Load Word List", "True"
+    Else
+        SetOptionValue "Load Word List", "False"
+    End If
+End Sub
+
+Private Sub Form_OKClick()
+    
+    SetOptions
+    frmOptions.Hide
+    
+End Sub
+
+
